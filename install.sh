@@ -108,6 +108,9 @@ sudo apt-get install -y python3-pip
 #install other python-related stuff for webdev
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 
+# install python3 venv
+sudo apt-get install -y python3-venv
+
 # generate keygen, needed for git
   ssh-keygen -t rsa -b 4096 - C $email
   # start ssh-agent if not running
