@@ -81,10 +81,10 @@ nvm use node
 sudo apt-get install postgresql postgresql-contrib
 
 # install hipchat
-  sudo sh -c 'echo "deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client $(lsb_release -c -s) main" > /etc/apt/sources.list.d/atlassian-hipchat4.list'
-  wget -O - https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | sudo apt-key add -
-  sudo apt-get update
-  sudo apt-get install hipchat4 
+  # sudo sh -c 'echo "deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client $(lsb_release -c -s) main" > /etc/apt/sources.list.d/atlassian-hipchat4.list'
+  # wget -O - https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | sudo apt-key add -
+  # sudo apt-get update
+  # sudo apt-get install hipchat4 
 
 # install xclip, needed for next step
 sudo apt-get install xclip
@@ -93,10 +93,20 @@ sudo apt-get install xclip
 sudo apt-get install sublime-text-installer
 
 # install zsh
-sudo apt-get install zsh
+# sudo apt-get install zsh
 
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# install python 3
+    sudo apt-get update
+    sudo apt-get -y upgrade
+
+# install pip3
+sudo apt-get install -y python3-pip
+
+#install other python-related stuff for webdev
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 
 # generate keygen, needed for git
   ssh-keygen -t rsa -b 4096 - C $email
@@ -118,6 +128,7 @@ echo "====================\n"
 echo "|other handy links:|\n"
 echo "====================\n"
 echo "\n"
+echo 'Install oh-my-zsh!: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
 echo "Intel XDK: https://software.intel.com/en-us/intel-xdk\n"
 echo "vimrc repo: https://github.com/lukaszkups/vimrc\n" 
 echo "Creating Postgres Database: https://github.com/lukaszkups/lukaszkups-old/blob/master/content/blog/0019_things_todo_after_installinig_elementaryos.md\n"
