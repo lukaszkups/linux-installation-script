@@ -111,6 +111,13 @@ sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 # install python3 venv
 sudo apt-get install -y python3-venv
 
+#install ruby 2
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash
+source ~/.profile
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+
 # generate keygen, needed for git
   ssh-keygen -t rsa -b 4096 - C $email
   # start ssh-agent if not running
